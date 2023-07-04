@@ -1,15 +1,15 @@
-.form {
-    width: 700px;
-    background-color:#425F4B;
-background-image: linear-gradient(30deg,#192E2F 12%, transparent 12.5%, transparent 87%,#192E2F 87.5%,#192E2F),
-linear-gradient(150deg,#192E2F 12%, transparent 12.5%, transparent 87%,#192E2F 87.5%,#192E2F),
-linear-gradient(30deg,#192E2F 12%, transparent 12.5%, transparent 87%,#192E2F 87.5%,#192E2F),
-linear-gradient(150deg,#192E2F 12%, transparent 12.5%, transparent 87%,#192E2F 87.5%,#192E2F),
-linear-gradient(60deg, #80A8A8 25%, transparent 25.5%, transparent 75%, #80A8A8 75%, #80A8A8),
-linear-gradient(60deg, #80A8A8 25%, transparent 25.5%, transparent 75%, #80A8A8 75%, #80A8A8);
-background-size:40px 70px;
-background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;}
 
 .center {
     z-index: 1;
+    
+}
+
+#detect {
+    background-color: #52B3ED;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    background:#2A0144 ;
 }

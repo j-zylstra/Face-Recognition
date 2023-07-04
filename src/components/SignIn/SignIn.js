@@ -18,31 +18,33 @@ class Signin extends React.Component {
     this.setState({signInPassword: event.target.value})
   }
 
-  onSubmitSignIn = async () => {
+  onSubmitSignIn = async (event) => {
+    event.preventDefault();
     try {
       const response = await fetch('http://localhost:3001/signin', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           email: this.state.signInEmail,
-          password: this.state.signInPassword
+          password: this.state.signInPassword,
+
         })
-      });
+      })
   
-      const data = await response.json();
-  
-      if (response.ok && data.success === true) {
+      .then(response => response.json())
+      .then (user => {
+      if (user.id) {
+        this.props.loadUser(user);
         this.props.onRouteChange('home');
       } else {
-        // Handle unsuccessful sign-in
-        // For example, display an error message or perform other actions
+        
         console.log('Sign-in failed');
       }
-    } catch (error) {
-      // Handle network or server errors
+    }) } catch (error) {
+      
       console.log('Error:', error);
-    }
-  }
+    }}
+   
   
 
   render() {

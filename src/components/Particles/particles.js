@@ -10,33 +10,14 @@ const ParticlesComponent = () => {
               fullscreen: {
                 enable: true,
               },
-              interactivity: {
-                  events: {
-                    onclick: {
-                      enable: true,
-                      mode: "push",
-                    },
-                    onhover: {
-                      enable: true,
-                      mode: "repulse",
-                    },
-                  },
-                  modes: {
-                     push: {
-                      quantity: 0,
-                     },
-                     repulse: {
-                      distance: 100,
-                     },
-                  }
-              },
+              
               particles: {
                 number: {
-                  value: 60,
+                  value: 70,
                 },
                 links: {
                     enable: true,
-                    distance: 200,
+                    distance: 150,
                 },
                 move: {
                     enable: true,
