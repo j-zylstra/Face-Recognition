@@ -102,13 +102,15 @@ displayFaceBox = (box) => {
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
           id: this.state.user.id
-          })
+          }),
          })
          .then(response => response.json())
-         .then(count => {
-          this.setState(Object.assign(this.state.user, { entries: count }))
-         })
-         .catch(console.log)
+         .then((count) => {
+          this.setState(Object.assign(this.state.user, { entries: count }));
+         });
+
+        console.log(this.state.user.entries);
+        
       }
         this.displayFaceBox(this.calculateFaceLocation(response))
         
