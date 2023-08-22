@@ -26,7 +26,7 @@ class Register extends React.Component {
   onSubmitSignIn = (event) => {
     event.preventDefault();
     {
-      fetch('https://vast-caverns-20756-f8729b26975b.herokuapp.com/register', {
+      fetch('https://git.heroku.com/vast-caverns-20756.git', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
