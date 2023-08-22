@@ -88,7 +88,7 @@ displayFaceBox = (box) => {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
   
-    fetch('https://vast-caverns-20756-f8729b26975b.herokuapp.com/imageurl', {
+    fetch('https://git.heroku.com/facefinder.git/imageurl', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -99,7 +99,7 @@ displayFaceBox = (box) => {
          .then(response => response.json())
          .then(response => {
           if (response) {
-            fetch('https://vast-caverns-20756-f8729b26975b.herokuapp.com/image', {
+            fetch('https://git.heroku.com/facefinder.git/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
