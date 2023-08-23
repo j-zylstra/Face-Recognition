@@ -88,7 +88,7 @@ displayFaceBox = (box) => {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
   
-    fetch('https://evening-lowlands-07472-04ef7f65244f.herokuapp.com/imageurl', {
+    fetch('https://cors-anywhere.evening-lowlands-07472-04ef7f65244f.herokuapp.com/imageurl', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -99,7 +99,7 @@ displayFaceBox = (box) => {
          .then(response => response.json())
          .then(response => {
           if (response) {
-            fetch('https://evening-lowlands-07472-04ef7f65244f.herokuapp.com/image', {
+            fetch('https://cors-anywhere.evening-lowlands-07472-04ef7f65244f.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
