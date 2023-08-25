@@ -99,7 +99,7 @@ displayFaceBox = (box) => {
          .then(response => response.json())
          .then(response => {
           if (response) {
-            fetch('https://cors.anywhere.git.heroku.com/evening-lowlands-07472.git/image', {
+            fetch('https://cors-anywhere.git.heroku.com/evening-lowlands-07472.git/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
